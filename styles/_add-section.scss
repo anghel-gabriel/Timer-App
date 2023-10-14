@@ -1,0 +1,43 @@
+.add-section {
+	@include flex(row, flex-end, center);
+	margin-bottom: 1rem;
+	input {
+		text-align: center;
+		width: rem;
+		padding: 0.2rem 0;
+		border-radius: 0.4rem;
+		background-color: transparent;
+		color: black;
+		border: 3px solid $font-color-tomato;
+		@include font($font-stack, 600, 1.5rem);
+		text-transform: uppercase;
+		transition: transform 0.4s;
+		&:hover,
+		&:focus {
+			transform: translateY(-0.7rem);
+		}
+	}
+	span {
+		margin: 0 0.2rem;
+	}
+	& button {
+		margin-left: 0.4rem;
+		padding: 0.2rem 1rem;
+		border-radius: 0.4rem;
+		background-color: $font-color-tomato;
+		color: $bg-body;
+		border: 3px solid $font-color-tomato;
+		@include font($font-stack, 600, 1.5rem);
+		text-transform: uppercase;
+		transition: color 0.4s, background-color 0.4s;
+		&:hover {
+			cursor: pointer;
+			background-color: transparent;
+			color: $font-color-tomato;
+		}
+	}
+
+	span {
+		font-weight: 900;
+	}
+}

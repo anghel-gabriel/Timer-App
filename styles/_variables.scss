@@ -1,0 +1,17 @@
+$font-stack: 'Rubik', sans-serif;
+
+$bg-body: #fef4db;
+$font-color-tomato: rgb(147, 44, 44);
+
+@mixin font($font-family: $font-stack, $font-weight, $font-size) {
+	font-family: $font-family;
+	font-weight: $font-weight;
+	font-size: $font-size;
+}
+
+@mixin flex($flex-direction, $justify-content, $align-items) {
+	display: flex;
+	flex-direction: $flex-direction;
+	justify-content: $justify-content;
+	align-items: $align-items;
+}

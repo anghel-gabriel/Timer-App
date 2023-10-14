@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>In Search of Lost Time</title>
+		<link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon" />
+		<link rel="stylesheet" href="./styles/style.css" />
+		<script src="./app.js" type="module" defer></script>
+	</head>
+	<body>
+		<header>
+			<div class="info-container">
+				<h1 class="title">In Search of Lost Time</h1>
+				<h2 class="description">The app that wasn't written by Marcel Proust</h2>
+			</div>
+			<div class="date">
+				<div class="date__day-month"></div>
+				<div class="date__year"></div>
+			</div>
+		</header>
+		<main>
+			<form class="add-section">
+				<input id="hours" type="number" value="00" min="0" max="24" maxlength="2" />
+				<span>:</span>
+				<input id="minutes" type="number" value="00" min="0" max="59" maxlength="2" />
+				<span>:</span>
+				<input id="seconds" type="number" value="20" min="0" max="59" maxlength="2" />
+				<button type="submit" class="add__btn">
+					<span>+</span>
+					Add Timer
+				</button>
+			</form>
+			<section class="timers-container"></section>
+		</main>
+		<footer></footer>
+	</body>
+</html>

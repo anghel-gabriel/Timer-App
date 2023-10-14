@@ -1,0 +1,102 @@
+main {
+	width: 100%;
+	border: 2px solid $font-color-tomato;
+	border-radius: 2rem;
+	padding: 2rem 2rem;
+}
+
+.timers-container {
+	@include flex(column, center, center);
+	gap: 1rem;
+}
+
+.timer {
+	opacity: 0;
+	@include flex(row, space-between, center);
+	padding: 1rem;
+	width: 100%;
+	border-radius: 0.4rem;
+	background-color: $font-color-tomato;
+	color: $bg-body;
+	transition: transform 0.3s, opacity 1s;
+	overflow: hidden;
+	cursor: pointer;
+	&:hover {
+		transform: scale(1.04);
+	}
+	&:active {
+		background-color: $bg-body;
+		color: $font-color-tomato;
+	}
+
+	&__details {
+		width: 12rem;
+		@include flex(column, center, center);
+		@include font($font-stack, 100, 0.9rem);
+	}
+}
+
+.timer.show {
+	opacity: 1;
+}
+
+.timer.delete {
+	opacity: 0;
+}
+
+.timer-label {
+	background-color: $bg-body;
+	@include font($font-stack, 100, 1rem);
+	color: $font-color-tomato;
+	padding: 0.2rem 0.8rem;
+	border-radius: 0.2rem;
+}
+
+.timer-countdown {
+	font-size: 2.9rem;
+}
+
+.timer-date {
+	font-size: 0.89rem;
+}
+
+.timer-btns {
+	@include flex(row, center, center);
+	gap: 1rem;
+	button {
+		width: 4rem;
+		height: 4rem;
+		border-radius: 2rem;
+		background-color: $bg-body;
+
+		background-repeat: no-repeat;
+		border: 3px solid $font-color-tomato;
+		transition: transform 0.4s, border 0.4s;
+		&:hover {
+			cursor: pointer;
+			transform: rotate(180deg);
+			border: 6px solid $bg-body;
+		}
+	}
+	&__reset {
+		background-position: center;
+		background-image: url('../assets/images/icon-reset.svg');
+		background-size: 65%;
+	}
+	&__playpause {
+		background-image: url('../assets/images/icon-play.svg');
+		background-size: 60%;
+		background-position-x: 0.88rem;
+		background-position-y: center;
+	}
+	&__remove {
+		background-position: center;
+		background-image: url('../assets/images/icon-remove.svg');
+		background-size: 80%;
+	}
+}
+
+.playing {
+	background-image: url('../assets/images/icon-pause.svg');
+	background-size: 50%;
+}

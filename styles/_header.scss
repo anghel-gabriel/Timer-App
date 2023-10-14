@@ -1,0 +1,30 @@
+header {
+	width: 100%;
+	padding-top: 3rem;
+	margin-bottom: 5rem;
+	@include flex(row, space-between, center);
+	width: 100%;
+}
+
+.info-container {
+	@include flex(column, center, center);
+}
+
+.title {
+	color: $font-color-tomato;
+	font-size: 3rem;
+}
+
+.description {
+	@include font($font-stack, 400, 1.58rem);
+}
+
+.date {
+	@include flex(column, center, flex-end);
+	font-size: 2rem;
+	width: 6.8rem;
+	&__year {
+		letter-spacing: 0.52rem;
+		margin-right: -0.5rem;
+	}
+}
