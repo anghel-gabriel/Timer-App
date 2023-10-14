@@ -6,5 +6,5 @@
 
 💻 To create this timer app I used: HTML, SCSS, JS, OOP, functional programming.
 
-🌠 Click here to use the app. https://in-search-of-the-lost-time.netlify.app/
+🌠 Click here to use the app: https://in-search-of-the-lost-time.netlify.app/
 
